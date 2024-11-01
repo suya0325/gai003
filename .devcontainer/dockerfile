@@ -1,0 +1,19 @@
+FROM python:3.12
+
+RUN apt-get update
+RUN apt-get -y install locales && \
+    localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
+
+RUN pip install --upgrade pip
+
+RUN pip install openai
+RUN pip install tiktoken
+RUN pip install anthropic
+RUN pip install google-generativeai
+RUN pip install streamlit
+RUN pip install langchain
+RUN pip install langchain-community
+RUN pip install langchain-core
+RUN pip install langchain-openai
+RUN pip install langchain-anthropic
+RUN pip install langchain-google-genai
